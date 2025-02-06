@@ -1,13 +1,22 @@
-// import logo from './logo.svg';
-// import './App.css';
-// import Myfunction from './components/Myfunction';
-
-// function App() {
-//   return (
-//     <div>
-//       <Myfunction></Myfunction>
-//     </div>
-//   );
+//! component composition example
+// import Navbar from "./components/Navbar";
+// import Main from "./components/Main"
+// import Sidebar1 from "./components/Sidebar1";
+// import Sidebar2 from "./components/Sidebar2";
+// import Footer from "./components/Footer";
+// import "./global.css";
+// const App=()=>{
+//     return(
+//         <div className="app">
+//           <Navbar/>
+//           <Main></Main>
+//           <div className="sidebar">
+//             <Sidebar1/>
+//             <Sidebar2/>
+//           </div>
+//           <Footer/>
+//         </div>
+//     )
 // }
 
 // export default App;
@@ -54,19 +63,47 @@
 // export default App
 
 //! propschildrenex
+// import React from 'react'
+// import PropsChildrenEx from './propsexample/PropsChildrenEx'
+// import ChildProps from './propsexample/ChildProps';
+
+// const App = () => {
+//   return (
+//     <div>
+//       <PropsChildrenEx username="Arun" company="Meta">
+//         <h1>This data is passed as props children</h1>
+//         <ChildProps/>
+//       </PropsChildrenEx>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//!CBCStateEx
+// import React from 'react'
+// import CBCStateEx from './stateexample/CBCStatesEx'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <CBCStateEx></CBCStateEx>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+//! FBCStateEx
 import React from 'react'
-import PropsChildrenEx from './propsexample/PropsChildrenEx'
-import ChildProps from './propsexample/ChildProps';
+import FBCStateEx from './stateexample/FBCStateEx'
 
 const App = () => {
   return (
     <div>
-      <PropsChildrenEx username="Arun" company="Meta">
-        <h1>This data is passed as props children</h1>
-        <ChildProps/>
-      </PropsChildrenEx>
+      <FBCStateEx></FBCStateEx>
     </div>
   )
 }
 
-export default App
+export default App;
