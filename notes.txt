@@ -1,0 +1,158 @@
+folder structure:-
+******************
+node modules :- this folder stores all the third party libraries.
+public :- this folder stores all the static files such as images , videos ,html files.
+src :- this is the actual react folder where develoepr can change , add , modify something to bring it on th UI.
+package.json:- this files is a heart of any react application which stores the inforamtion regarding all the third party depedencies and information about the application such as author etc..
+package-lock.json:-this file used to lock the versions of third party libraries whn it installed.
+
+- inside src folder index.js file is a mandatory file.
+- the name of this file must be index.js only
+- index.js act as a bridge between index.html and react components.
+
+React library :- this library is the main library which contains all the preddefined methods, functionalitis etc..
+ReactDOM library : - this library is responsible for creating virtual dom and updating the real dom.
+React scripts :- to start react app and to update lively we need this library.
+
+JSX :-
+******
+- JSX is a Javascript and XML.
+- JSX is a javascript syntax which is used to write html-like markup in the react js. 
+- JSX is combination of javascript and xml.
+- JSX is not belongs to react js.
+
+- actual way of creating a elements in react js ,
+    React.createElement(""type of tag" , {properties:values} , children/content) 
+     let ele = React.createElement("div" , {id:"demo"} ,
+        React.createElement("h1" ,null ,"Header"),
+        React.createElement("p" ,null, "para")
+     )
+
+- JSX is case sensitive.
+
+Rules of jsx:-
+**************
+1. all the tags irrespective of paired or unpaired tag every tag must be closed.
+2. when more than one jsx element is using  they must wrapped with one parent element.
+
+JSX expressions:-
+******************
+- it is used to call the variables , expressions.
+syntax :-  {}
+
+
+components :-
+*************
+-  components are nothing but just a files which contains javascript related codes.
+
+- components are divided into 2 types. they are,
+    1.class based components
+    2.functional based components
+
+class based component:-
+***********************
+- this is similar to javascript es6 class syntax.
+- this components are called as "statefull components" because class component by default having state object.
+
+- class App extends React.Component{
+    render(){
+        return(
+            <div></div>
+        )
+    }
+};
+
+export default App.
+
+
+functional based component:-
+****************************
+- this is similar to javascript functions.
+- this component is a "stateless component" until React v16.8 because it does not have any default state object.
+
+- function App(){
+    return(
+        //jsx
+    )
+}
+export default App;
+
+const App=()=>{
+    return(
+        //jsx
+    )
+};
+export default App;
+
+
+component composition:-
+***********************
+-  multiple components are combined together to make one single application.
+
+Note:- - every component must be created with Capital letters.
+                ex:-  App.jsx/App.js
+
+    - two components should not have a same name in the same directory.
+    - Hot to call component inside another component.
+            ex :-   <App/> / <App></App>
+
+Props :-
+********
+- Props is an object.
+- props is a immutable object.
+- props is nothing but properties.
+- props is used to share the information/data from one component to another component.
+- props can be passed string , number ,boolean , array , object , function etc....
+- props can be passed from parent component to child component.
+- Props can send a data similar to html attributes.
+- except string all other data types which is passing as a props must be wrapped inside a JSX expression.
+
+note:-  rcc -> react class component
+        rafce -> react arrow function component expression.
+
+props children:-
+****************
+-A props.children prop is a specail type of props used to share the information such as data , component to another component as a childrens.
+
+props drilling:-
+****************
+- prop is passing through multiple child elements to print in last child element/specified child element.
+- rops drilling is a passing a data down to child component.
+
+
+State:-
+*******
+- state is an object which is used to store / isolate the data inside the component.
+- state is mutable object.
+
+class components:-
+******************
+- In class component we have defualt state object.
+syntax :-  constructor(){
+        super();
+        this.state={
+            username:"Pranav"
+        };
+    }
+
+- to update the state of an class component we have a method called as "this.setState()"
+
+function component:-
+- functional component by default is a stateless until React v16.8, later they introduce
+    "hooks" concept which makes react functional component as statefull component.
+- useState() is making functional component from stateless to statefull component.
+
+syntax :-  const [state , setState] = useState(intitalValue);
+                    state - this will store the initial values
+                    setState - it is a method to update the state.
+
+Hooks:- hooks are nothing but functions which are used to provide all the features of class based component  into functional component.
+
+basic hooks are:-
+1.useState()
+2.useEffect()
+3.useContext()
+
+
+Note:- 
+this keyword :- it will target current object.

@@ -95,15 +95,29 @@
 // export default App;
 
 //! FBCStateEx
+// import React from 'react'
+// import FBCStateEx from './stateexample/FBCStateEx'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FBCStateEx></FBCStateEx>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+//! FunctionalComponent
 import React from 'react'
-import FBCStateEx from './stateexample/FBCStateEx'
+import FunctionalComponent from './components/FunctionalComponent'
 
 const App = () => {
   return (
     <div>
-      <FBCStateEx></FBCStateEx>
+      <FunctionalComponent city="Hyderabad" state="ts"></FunctionalComponent>
     </div>
   )
 }
 
-export default App;
+export default App
