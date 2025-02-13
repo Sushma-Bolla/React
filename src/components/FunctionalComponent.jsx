@@ -16,4 +16,4 @@ const FunctionalComponent = (props) => {
   )
 }
 
-export default FunctionalComponent
+export default FunctionalComponent;

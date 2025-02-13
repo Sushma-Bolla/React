@@ -1,4 +1,4 @@
-*{
+/* *{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -35,4 +35,15 @@
 .foot{
     height: 10%;
     background-color: slateblue;
+} */
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 100%;
+    font-family: sans-serif;
 }

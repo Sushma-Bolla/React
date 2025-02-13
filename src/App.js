@@ -109,14 +109,101 @@
 // export default App;
 
 //! FunctionalComponent
+// import React from 'react'
+// import FunctionalComponent from './components/FunctionalComponent'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FunctionalComponent city="Hyderabad" state="ts"></FunctionalComponent>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//! myForm
+// import React from 'react'
+// import Form from './components/Form'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Form />
+//     </div>
+//   )
+// }
+
+// export default App
+
+//! hooks
+// import React from 'react'
+// import RefExamples from './hooks/RefExamples'
+// import UseEffectEx from './hooks/UseEffectEx'
+
+// const App = () => {
+//   return (
+//     <div>
+//       {/* <UseEffectEx></UseEffectEx> */}
+//       <RefExamples></RefExamples>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// ! context api example
+// import React from 'react'
+// import ContextC1 from './contextapi/ContextC1'
+// import ContextAPI from './contextapi/ContextAPI'
+
+// const App = () => {
+//   return (
+//     <div>
+//      <ContextAPI>
+//       <ContextC1/>
+//      </ContextAPI>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//! routing components
 import React from 'react'
-import FunctionalComponent from './components/FunctionalComponent'
+import Navbar from './components(routing)/Navbar'
+import {BrowserRouter , Routes , Route} from "react-router-dom";
+import Dashboard from './pages/Dashboard';
+import ClassRoom from './pages/ClassRoom';
+import Assessment from './pages/Assessment';
+import Store from './pages/Store';
+import Calender from './pages/Calender';
+import News from './pages/News';
+import Blog from './pages/Blog';
+import PageNotFound from './pages/PageNotFound';
+import Profile from './pages/Profile';
+import MyAccounts from './pages/MyAccounts';
+import MySettings from './pages/MySettings';
 
 const App = () => {
   return (
-    <div>
-      <FunctionalComponent city="Hyderabad" state="ts"></FunctionalComponent>
-    </div>
+    <BrowserRouter>
+        <Navbar/>
+        <Routes>
+            <Route path='/' element={<Dashboard/>}/>
+            <Route path='/classroom' element={<ClassRoom/>}/>
+            <Route path='/assessment' element={<Assessment/>}/>
+            <Route path='/store' element={<Store/>}/>
+            <Route path='/calender' element={<Calender/>}/>
+            <Route path='/news' element={<News/>}/>
+            <Route path='/blog' element={<Blog/>}/>
+            <Route path='/profile' element={<Profile/>}>
+                <Route path='myaccount' element={<MyAccounts/>}/>
+                <Route path='mysettings' element={<MySettings/>}/>
+            </Route>
+            <Route path='*' element={<PageNotFound/>}/>
+        </Routes>
+    </BrowserRouter>
   )
 }
 
